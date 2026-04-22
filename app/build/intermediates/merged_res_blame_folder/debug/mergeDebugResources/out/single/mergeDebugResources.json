@@ -1,154 +1,146 @@
 [
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_dialer_key.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\dialer_key.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\activity_main.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_search.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_search.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_call.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_call.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.callerid.finder.app-debug-26:/layout_activity_permissions.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/activity_permissions.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_cursor_green.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\cursor_green.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_bg_key_ripple.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\bg_key_ripple.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_recents.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_recents.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_search.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_search.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_bg_call_button.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\bg_call_button.xml"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-hdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_more.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_more.xml"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_back.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_back.xml"
-    },
-    {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_contacts.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_contacts.xml"
     },
     {
         "merged": "com.callerid.finder.app-debug-26:/layout_dialer_key.xml.flat",
         "source": "com.callerid.finder.app-main-28:/layout/dialer_key.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.callerid.finder.app-debug-26:/layout_dialog_recents.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/dialog_recents.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_item_recent_call.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\item_recent_call.xml"
+        "merged": "com.callerid.finder.app-debug-26:/layout_overlay_layout.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/overlay_layout.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.callerid.finder.app-debug-26:/layout_item_recent_header.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/item_recent_header.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_cursor_green.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/cursor_green.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.callerid.finder.app-debug-26:/layout_activity_settings.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.callerid.finder.app-debug-26:/layout_item_recent_call.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/item_recent_call.xml"
+    },
+    {
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_back.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_back.xml"
     },
     {
         "merged": "com.callerid.finder.app-debug-26:/layout_activity_main.xml.flat",
         "source": "com.callerid.finder.app-main-28:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_contacts.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_contacts.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_dialog_recents.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\dialog_recents.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_overlay_layout.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\overlay_layout.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_call.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_call.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_item_recent_header.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\item_recent_header.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_activity_permissions.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\activity_permissions.xml"
+        "merged": "com.callerid.finder.app-debug-26:/layout_activity_about.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/layout/activity_about.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\drawable_ic_recents.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\drawable\\ic_recents.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_activity_settings.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\activity_settings.xml"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_bg_key_ripple.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/bg_key_ripple.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_bg_call_button.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/bg_call_button.xml"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\layout_activity_about.xml.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\layout\\activity_about.xml"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.callerid.finder.app-debug-26:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.callerid.finder.app-main-28:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-debug-26:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\abdul\\.gradle\\daemon\\9.3.1\\com.callerid.finder.app-main-28:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.callerid.finder.app-debug-26:/drawable_ic_more.xml.flat",
+        "source": "com.callerid.finder.app-main-28:/drawable/ic_more.xml"
     }
 ]
