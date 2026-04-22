@@ -33,6 +33,7 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="CallerID Finder"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.callerid.finder.PermissionsActivity"

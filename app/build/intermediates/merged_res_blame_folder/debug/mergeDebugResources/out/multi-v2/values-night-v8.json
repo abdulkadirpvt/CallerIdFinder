@@ -4,6 +4,23 @@
             "outputFile": "com.callerid.finder.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\abdul\\Documents\\Vs Code\\CallerIdFinder\\CallerIdFinder\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,103",
+                        "endColumns": "44,51",
+                        "endOffsets": "97,150"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,100",
+                        "endColumns": "44,51",
+                        "endOffsets": "95,147"
+                    }
+                },
+                {
                     "source": "C:\\Users\\abdul\\.gradle\\caches\\9.3.1\\transforms\\c4159ea85769841182302bd03e80bbfd\\workspace\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -18,16 +35,6 @@
                         "startOffsets": "152,222,306,390,486,588,690,784",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "217,301,385,481,583,685,779,868"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\abdul\\Documents\\Vs Code\\CallerIdFinder\\app\\src\\main\\res\\values-night\\colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,100",
-                        "endColumns": "44,51",
-                        "endOffsets": "95,147"
                     }
                 }
             ]
