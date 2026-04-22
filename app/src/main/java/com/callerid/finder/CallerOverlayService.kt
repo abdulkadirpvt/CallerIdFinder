@@ -22,7 +22,9 @@ class CallerOverlayService : Service() {
 
     companion object {
         private const val CHANNEL_ID = "caller_id_channel"
+        private const val MISSED_CHANNEL_ID = "missed_call_channel"
         private const val NOTIF_ID = 1
+        private const val MISSED_NOTIF_ID = 2
         private const val API_URL = "https://database-sigma-nine.vercel.app/number/%s?api_key=YOUR-PASSWORD"
     }
 
@@ -71,9 +73,22 @@ class CallerOverlayService : Service() {
                 break
             }
             showOverlay(result)
+            showMissedCallNotification(number, result)
             delay(20000)
             stopSelf()
         }
+    }
+
+    private fun showMissedCallNotification(number: String, info: String) {
+        val notification = NotificationCompat.Builder(this, MISSED_CHANNEL_ID)
+            .setContentTitle("Missed call: $number")
+            .setContentText(info)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(info))
+            .setSmallIcon(android.R.drawable.ic_menu_call)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setAutoCancel(true)
+            .build()
+        getSystemService(NotificationManager::class.java).notify(MISSED_NOTIF_ID, notification)
     }
 
     private fun parseResponse(raw: String): String {
@@ -161,8 +176,9 @@ class CallerOverlayService : Service() {
             .build()
 
     private fun createNotificationChannel() {
-        val channel = NotificationChannel(CHANNEL_ID, "Caller ID", NotificationManager.IMPORTANCE_LOW)
-        getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
+        val nm = getSystemService(NotificationManager::class.java)
+        nm.createNotificationChannel(NotificationChannel(CHANNEL_ID, "Caller ID", NotificationManager.IMPORTANCE_LOW))
+        nm.createNotificationChannel(NotificationChannel(MISSED_CHANNEL_ID, "Missed Call Info", NotificationManager.IMPORTANCE_HIGH))
     }
 
     override fun onDestroy() {
