@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvDigit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:id="@+id/tvLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:includeFontPadding="false"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="0.15" />
+
+</LinearLayout>
