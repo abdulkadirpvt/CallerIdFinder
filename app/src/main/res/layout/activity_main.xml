@@ -46,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_above="@id/numberRow"
             android:paddingStart="16dp"
             android:paddingEnd="16dp">
 
@@ -63,6 +64,7 @@
 
         <!-- Number row pinned to bottom, just above keypad -->
         <RelativeLayout
+            android:id="@+id/numberRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
