@@ -1,6 +1,7 @@
 # Gradle
 .gradle/
 build/
+**/build/
 
 # Android local config
 local.properties
@@ -15,3 +16,8 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Android extras (recommended)
+captures/
+.externalNativeBuild/
+.cxx/
