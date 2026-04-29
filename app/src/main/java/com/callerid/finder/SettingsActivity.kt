@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 class SettingsActivity : AppCompatActivity() {
 
     private val prefs by lazy { getSharedPreferences("settings", MODE_PRIVATE) }
+    private val vibrator by lazy { getSystemService(VIBRATOR_SERVICE) as Vibrator }
+    private var lastVibrateTime = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +29,7 @@ class SettingsActivity : AppCompatActivity() {
         val tvIntensityValue = findViewById<TextView>(R.id.tvIntensityValue)
 
         val vibrateOn = prefs.getBoolean("vibrate", true)
-        val intensity = prefs.getInt("vibrate_intensity", 128).coerceAtLeast(1)
+        val intensity = prefs.getInt("vibrate_intensity", 220)
 
         switchVibrate.isChecked = vibrateOn
         seekIntensity.max = 255
@@ -45,18 +47,18 @@ class SettingsActivity : AppCompatActivity() {
         seekIntensity.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar, progress: Int, fromUser: Boolean) {
                 if (!fromUser) return
-                val clamped = progress.coerceAtLeast(1)
-                val pct = clamped * 100 / 255
-                tvIntensityValue.text = "$pct%"
-                prefs.edit().putInt("vibrate_intensity", clamped).apply()
+                tvIntensityValue.text = "${progress * 100 / 255}%"
+                prefs.edit().putInt("vibrate_intensity", progress).commit()
+                val now = System.currentTimeMillis()
+                if (progress > 0 && now - lastVibrateTime >= 100) {
+                    lastVibrateTime = now
+                    vibrator.cancel()
+                    val duration = (progress * 80L / 255).coerceAtLeast(10)
+                    vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
+                }
             }
             override fun onStartTrackingTouch(sb: SeekBar) {}
-            override fun onStopTrackingTouch(sb: SeekBar) {
-                // Preview vibration at new intensity so user can feel it
-                val clamped = sb.progress.coerceAtLeast(1)
-                val vib = getSystemService(VIBRATOR_SERVICE) as Vibrator
-                vib.vibrate(VibrationEffect.createOneShot(40, clamped))
-            }
+            override fun onStopTrackingTouch(sb: SeekBar) {}
         })
 
         findViewById<LinearLayout>(R.id.rowPermissions).setOnClickListener {

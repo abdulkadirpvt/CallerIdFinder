@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
 
     private val prefs by lazy { getSharedPreferences("settings", MODE_PRIVATE) }
     private val isVibrateEnabled get() = prefs.getBoolean("vibrate", true)
+    private val vibrator by lazy { getSystemService(android.content.Context.VIBRATOR_SERVICE) as Vibrator }
 
     private val contactPickerLauncher = registerForActivityResult(
         ActivityResultContracts.PickContact()
@@ -424,9 +425,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun vibrate() {
         if (!isVibrateEnabled) return
-        val intensity = prefs.getInt("vibrate_intensity", 128)
-        val vib = getSystemService(android.content.Context.VIBRATOR_SERVICE) as Vibrator
-        vib.vibrate(VibrationEffect.createOneShot(30, intensity))
+        val intensity = getSharedPreferences("settings", MODE_PRIVATE).getInt("vibrate_intensity", 220)
+        if (intensity <= 0) return
+        val duration = (intensity * 80L / 255).coerceAtLeast(10)
+        vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
     }
 
     private fun hideKeyboard() {
