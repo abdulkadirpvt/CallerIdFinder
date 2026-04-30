@@ -13,6 +13,17 @@
         android:gravity="end|center_vertical">
 
         <ImageView
+            android:id="@+id/btnAddContact"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_add"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:contentDescription="Add contact" />
+
+        <ImageView
             android:id="@+id/btnSearchId"
             android:layout_width="48dp"
             android:layout_height="48dp"
