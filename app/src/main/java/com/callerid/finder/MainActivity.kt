@@ -175,6 +175,14 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     showResult("Error making call: ${e.message}")
                 }
+            } else {
+                val lastNumber = contentResolver.query(
+                    CallLog.Calls.CONTENT_URI,
+                    arrayOf(CallLog.Calls.NUMBER),
+                    null, null,
+                    "${CallLog.Calls.DATE} DESC"
+                )?.use { c -> if (c.moveToFirst()) c.getString(0) else null }
+                if (lastNumber != null) setNumber(lastNumber)
             }
         }
 
