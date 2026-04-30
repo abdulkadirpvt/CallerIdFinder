@@ -38,7 +38,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var tvNumber: EditText
     private lateinit var tvSearchResult: TextView
+    private lateinit var contactList: RecyclerView
     private var searchJob: Job? = null
+
+    private data class Contact(val name: String, val number: String)
+    private val allContacts = mutableListOf<Contact>()
 
     // digit, letters, frameId
     private val keys = listOf(
@@ -102,11 +106,19 @@ class MainActivity : AppCompatActivity() {
 
         tvNumber = findViewById(R.id.tvNumber)
         tvSearchResult = findViewById(R.id.tvSearchResult)
+        contactList = findViewById(R.id.contactList)
+        contactList.layoutManager = LinearLayoutManager(this)
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            loadContacts()
+        }
 
         tvNumber.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+                filterContacts(s?.toString() ?: "")
+            }
         })
 
         // Suppress keyboard on focus but allow copy/paste context menu
@@ -375,13 +387,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showResult(text: String) {
-        tvSearchResult.visibility = android.view.View.VISIBLE
+        tvSearchResult.visibility = View.VISIBLE
         tvSearchResult.text = text
     }
 
     private fun clearResult() {
-        tvSearchResult.visibility = android.view.View.GONE
+        tvSearchResult.visibility = View.GONE
         tvSearchResult.text = ""
+        contactList.visibility = View.GONE
     }
 
     private fun parseResponse(raw: String): String {
@@ -404,6 +417,73 @@ class MainActivity : AppCompatActivity() {
                 if (isEmpty()) append("No info found")
             }
         } catch (e: Exception) { "Error: ${e.message}" }
+    }
+
+    private fun loadContacts() {
+        contentResolver.query(
+            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+            arrayOf(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
+                    ContactsContract.CommonDataKinds.Phone.NUMBER),
+            null, null,
+            ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC"
+        )?.use { c ->
+            while (c.moveToNext()) {
+                val name = c.getString(0)?.trim() ?: continue
+                val num = c.getString(1)?.filter { it.isDigit() || it == '+' } ?: continue
+                if (name.isNotBlank() && num.isNotBlank())
+                    allContacts.add(Contact(name, num))
+            }
+        }
+    }
+
+    private fun toT9(name: String): String {
+        val map = mapOf(
+            'a' to '2', 'b' to '2', 'c' to '2',
+            'd' to '3', 'e' to '3', 'f' to '3',
+            'g' to '4', 'h' to '4', 'i' to '4',
+            'j' to '5', 'k' to '5', 'l' to '5',
+            'm' to '6', 'n' to '6', 'o' to '6',
+            'p' to '7', 'q' to '7', 'r' to '7', 's' to '7',
+            't' to '8', 'u' to '8', 'v' to '8',
+            'w' to '9', 'x' to '9', 'y' to '9', 'z' to '9'
+        )
+        return name.lowercase().map { map[it] ?: it }.joinToString("")
+    }
+
+    private fun filterContacts(query: String) {
+        if (query.isEmpty()) {
+            contactList.visibility = View.GONE
+            return
+        }
+        val digits = query.filter { it.isDigit() }
+        if (digits.isEmpty()) {
+            contactList.visibility = View.GONE
+            return
+        }
+        val matches = allContacts.filter { c ->
+            c.number.contains(digits) || toT9(c.name).contains(digits)
+        }.take(10)
+        if (matches.isEmpty()) {
+            contactList.visibility = View.GONE
+            return
+        }
+        contactList.visibility = View.VISIBLE
+        contactList.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+            inner class VH(v: View) : RecyclerView.ViewHolder(v) {
+                val name: TextView = v.findViewById(R.id.tvContactName)
+                val number: TextView = v.findViewById(R.id.tvContactNumber)
+            }
+            override fun onCreateViewHolder(parent: ViewGroup, type: Int) =
+                VH(LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false))
+            override fun getItemCount() = matches.size
+            override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
+                val h = holder as VH
+                val c = matches[pos]
+                h.name.text = c.name
+                h.number.text = c.number
+                h.itemView.setOnClickListener { setNumber(c.number) }
+            }
+        }
     }
 
     private fun allPermissionsGranted(): Boolean {
