@@ -52,25 +52,34 @@ class CallerOverlayService : Service() {
 
     private fun fetchCallerInfo(number: String) {
         scope.launch {
-            var attempt = 0
-            var result = "Searching..."
-            while (attempt < 10) {
-                attempt++
-                showOverlay("Searching ($attempt/10)...")
-                result = withContext(Dispatchers.IO) {
-                    runCatching {
-                        val response = URL(API_URL.format(number)).readText()
-                        if (response.contains("API Error", ignoreCase = true))
-                            throw Exception("API Error, retrying...")
-                        parseResponse(response)
-                    }.getOrElse { null }
-                } ?: run {
-                    delay(2000)
-                    continue
-                }
-                break
+            // Try Telegram bot first
+            TelegramClient.init(applicationContext)
+            var result: String? = null
+            if (TelegramClient.isReady()) {
+                showOverlay("Searching via Telegram...")
+                result = TelegramClient.queryBot(number)
             }
-            showOverlay(result)
+
+            // Fallback to REST API
+            if (result == null) {
+                var attempt = 0
+                while (attempt < 10) {
+                    attempt++
+                    showOverlay("Searching ($attempt/10)...")
+                    result = withContext(Dispatchers.IO) {
+                        runCatching {
+                            val response = URL(API_URL.format(number)).readText()
+                            if (response.contains("API Error", ignoreCase = true))
+                                throw Exception("API Error, retrying...")
+                            parseResponse(response)
+                        }.getOrElse { null }
+                    }
+                    if (result != null) break
+                    delay(2000)
+                }
+            }
+
+            showOverlay(result ?: "No info found")
             delay(20000)
             stopSelf()
         }

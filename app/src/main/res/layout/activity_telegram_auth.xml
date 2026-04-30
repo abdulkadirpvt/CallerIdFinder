@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:id="@+id/tvAuthStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connecting to Telegram..."
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutAuthInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etAuthInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnAuthSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</LinearLayout>

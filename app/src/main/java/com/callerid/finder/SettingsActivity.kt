@@ -65,5 +65,11 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(this, PermissionsActivity::class.java)
                 .putExtra("from_settings", true))
         }
+
+        val tvTelegramStatus = findViewById<TextView>(R.id.tvTelegramStatus)
+        tvTelegramStatus.text = if (TelegramClient.isReady()) "Logged in ✓" else "Not logged in"
+        findViewById<LinearLayout>(R.id.rowTelegramLogin).setOnClickListener {
+            startActivity(Intent(this, TelegramAuthActivity::class.java))
+        }
     }
 }

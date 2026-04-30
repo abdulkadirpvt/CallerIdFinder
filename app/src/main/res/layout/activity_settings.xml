@@ -148,4 +148,52 @@
 
     </LinearLayout>
 
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <!-- Telegram login row -->
+    <LinearLayout
+        android:id="@+id/rowTelegramLogin"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telegram Account"
+                android:textSize="16sp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTelegramStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not logged in"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="20sp"
+            android:textColor="?android:attr/textColorSecondary" />
+
+    </LinearLayout>
+
 </LinearLayout>

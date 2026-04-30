@@ -36,6 +36,10 @@ class PermissionsActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (!fromSettings && allGranted()) {
+            TelegramClient.init(this)
+            if (!TelegramClient.isReady()) {
+                startActivity(Intent(this, TelegramAuthActivity::class.java))
+            }
             startActivity(Intent(this, MainActivity::class.java))
             finish()
             return
