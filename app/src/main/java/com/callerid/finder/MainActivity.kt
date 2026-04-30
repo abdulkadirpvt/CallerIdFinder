@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvNumber: EditText
     private lateinit var tvSearchResult: TextView
     private lateinit var contactList: RecyclerView
+    private lateinit var btnAddContact: ImageView
     private var searchJob: Job? = null
 
     private data class Contact(val name: String, val number: String)
@@ -108,6 +109,7 @@ class MainActivity : AppCompatActivity() {
         tvSearchResult = findViewById(R.id.tvSearchResult)
         contactList = findViewById(R.id.contactList)
         contactList.layoutManager = LinearLayoutManager(this)
+        btnAddContact = findViewById(R.id.btnAddContact)
 
         lifecycleScope.launch(Dispatchers.IO) {
             loadContacts()
@@ -118,6 +120,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
                 filterContacts(s?.toString() ?: "")
+                btnAddContact.visibility = if (s?.isNotEmpty() == true) View.VISIBLE else View.GONE
             }
         })
 
@@ -229,6 +232,24 @@ class MainActivity : AppCompatActivity() {
         backspace.setOnTouchListener { v, event ->
             v.onTouchEvent(event)
             true
+        }
+
+        btnAddContact.setOnClickListener {
+            val number = tvNumber.text.toString().trim()
+            AlertDialog.Builder(this)
+                .setItems(arrayOf("Create new contact", "Add to existing contact")) { _, which ->
+                    if (which == 0) {
+                        startActivity(Intent(ContactsContract.Intents.Insert.ACTION).apply {
+                            type = ContactsContract.RawContacts.CONTENT_TYPE
+                            putExtra(ContactsContract.Intents.Insert.PHONE, number)
+                        })
+                    } else {
+                        startActivity(Intent(Intent.ACTION_INSERT_OR_EDIT).apply {
+                            type = ContactsContract.Contacts.CONTENT_ITEM_TYPE
+                            putExtra(ContactsContract.Intents.Insert.PHONE, number)
+                        })
+                    }
+                }.show()
         }
 
         findViewById<ImageView>(R.id.btnSearchId).setOnClickListener {
