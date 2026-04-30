@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_above="@id/numberRow"
+            android:layout_above="@id/contactList"
             android:paddingStart="16dp"
             android:paddingEnd="16dp">
 
@@ -61,6 +61,15 @@
                 android:visibility="gone" />
 
         </ScrollView>
+
+        <!-- Contact matches list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/numberRow"
+            android:layout_alignParentBottom="false"
+            android:visibility="gone" />
 
         <!-- Number row pinned to bottom, just above keypad -->
         <RelativeLayout
