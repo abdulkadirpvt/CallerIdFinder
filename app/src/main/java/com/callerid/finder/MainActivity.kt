@@ -179,7 +179,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val backspace = findViewById<TextView>(R.id.btnBackspace)
-        var deleteJob: Job? = null
         var isLongPress = false
 
         backspace.setOnClickListener {
@@ -199,31 +198,15 @@ class MainActivity : AppCompatActivity() {
 
         backspace.setOnLongClickListener {
             isLongPress = true
-            deleteJob = lifecycleScope.launch {
-                searchJob?.cancel()
-                searchJob = null
-                clearResult()
-                while (tvNumber.text.isNotEmpty()) {
-                    vibrate()
-                    val t = tvNumber.text.toString()
-                    val cursor = tvNumber.selectionStart.coerceIn(0, t.length)
-                    if (cursor > 0) {
-                        val new = t.removeRange(cursor - 1, cursor)
-                        tvNumber.setText(new)
-                        tvNumber.setSelection(cursor - 1)
-                    } else break
-                    delay(80)
-                }
-            }
+            vibrate()
+            searchJob?.cancel()
+            searchJob = null
+            tvNumber.setText("")
+            clearResult()
             true
         }
 
         backspace.setOnTouchListener { v, event ->
-            if (event.action == android.view.MotionEvent.ACTION_UP ||
-                event.action == android.view.MotionEvent.ACTION_CANCEL) {
-                deleteJob?.cancel()
-                deleteJob = null
-            }
             v.onTouchEvent(event)
             true
         }
