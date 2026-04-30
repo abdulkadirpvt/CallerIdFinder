@@ -233,7 +233,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<ImageView>(R.id.btnSearchId).setOnClickListener {
             val number = tvNumber.text.toString().trim()
-            if (number.isNotEmpty()) searchNumber(number)
+            if (number.isNotEmpty()) {
+                contactList.visibility = View.GONE
+                searchNumber(number)
+            }
             else showResult("Please enter a number")
         }
 
